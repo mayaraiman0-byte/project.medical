@@ -1,0 +1,997 @@
+*{margin: 0;
+  padding: 0; 
+  box-sizing: border-box;}
+body{
+    word-spacing: 2;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.heading{
+    width: 100%;
+    height: 55px;
+    background-color: rgba(67, 118, 175, .8);
+    position: fixed;
+    z-index: 100;
+    color: white;
+}
+.icon-head{
+    font-size: 40;
+    margin-left: 20px;
+    margin-top: 6px;
+    float: left;
+}
+.search-head i{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 10px;
+    color: rgb(67, 118, 175);
+}
+.search-head {
+    position: relative;
+    float: left;
+    margin-left: 40px;
+}
+.search-head input{
+    height: 30px;
+    width: 200px;
+    border: 2px solid rgb(67, 118, 175);
+    border-radius: 40px;
+    margin-top: 13px;
+    padding-left: 30px;
+    color: rgb(67, 118, 175);
+}
+.list-head{
+    float: right;
+    margin-right: 30px;
+    margin-top: 18px;
+}
+.list-head li{
+    display: inline-block;
+    list-style: none;
+    margin-right: 30px;
+    position: relative;  
+}
+.list-head li a{
+   text-decoration: none;
+   color: rgb(255, 255, 255);
+   position: relative;
+}
+.list-head li a::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    transition: .5s;
+    height: 2px;     
+    width: 0;      
+    background-color: white;
+}
+
+.list-head li a:hover::after{
+    width: 100%;
+}
+.list-head .list-list{
+    position: absolute;
+    top: 100%px;
+    left: 0;
+    background-color: rgba(60, 106, 158, .7);
+    list-style: none;
+    width: 50px;
+    border: none;
+    border-radius: 10px;
+}
+.list-list li a{
+    color: white;
+    background: none;
+}
+.list-list .list-list-li:hover {
+    background:none
+}
+.home{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/home.jpg);
+    background-size: cover;
+    position: relative;
+}
+.home-overlay{
+    position: absolute;
+    background-color: rgba(255, 255, 255 ,.7);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+.home-contnet{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   text-align:center;
+   font-size: 25px;
+}
+.home-contnet h2{
+    color: #223b58;
+    font-size: 50;
+}
+.home-contnet p{
+    color: #3c6a9e;
+    margin: 10px 0;
+    text-transform: capitalize;
+}
+.home-contnet .home-btn{
+    width: 200px;
+    height: 40px;
+    font-size: 18px;
+    margin-top: 15px;
+    border: 2px solid #3c6a9e;
+    border-radius: 5px;
+}
+.home-btn1{
+    color: #223b58;
+}
+.home-btn2{
+    color: white;
+    background-color: #223b58;
+}
+.home-contnet .home-btn:hover{
+    opacity: .7;
+}
+.list-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 10px 0;
+    min-width: 180px;
+    z-index: 100;
+}
+.list-list li {
+    padding: 8px 20px;
+}
+.list-list li:hover {
+    background-color: white;
+}
+.list-head li:hover .list-list {
+    display: block;
+}
+.title{
+    color: #223b58;
+    font-size: 50;
+    text-align: center;
+    padding-top: 90px;
+}
+.welcome{
+    width: 100%;
+    height: 100vh;
+}
+.line-title{
+    background-color: #223b58;
+    width: 150px;
+    height: 4px;
+    margin: auto;
+    margin-top: 15px;
+}
+.welcom-div{
+    width: 30%;
+    height: 100%;
+    border: 2px solid #223b58;
+    float: left;
+    text-align: center;
+    color: #223b58;
+    border-radius: 20px;
+    padding: 0 10px;
+    position: relative;
+}
+.perant-welcom{
+    height: 300px;
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    position: relative; 
+}
+.welcom-div3, .welcom-div2{
+    margin-left: 5%;
+}
+.welcom-div i{
+    font-size: 60px;
+    margin-bottom: 50;
+    margin-top: 30px;
+}
+.welcom-div h3{
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+.welcom-div p{
+    color: #3c6a9e;
+    margin-bottom: 15px;
+}
+.welcom-div a{
+    color: #223b58;
+}
+.welcom-div:hover::after{
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    opacity: 0;
+    visibility: visible;
+    z-index: 1;
+    opacity: .8;
+    border-radius: inherit;
+}
+.welcom-div::after{
+    content: "";
+    background-color: #3c6a9e;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: .5;
+    z-index: 1;
+    border-radius: inherit;
+}
+.welcom-div:hover i{
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+.welcom-div:hover h3{
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+.welcom-div:hover p{
+    position: relative;
+    z-index: 2;
+    color: #d6eeff;
+}
+.welcom-div:hover a{
+    position: relative;
+    z-index: 2;
+    color: white; 
+    text-decoration: none;
+}
+.servic{
+    height: 100vh;
+    background-color: #f3faff;
+}
+.perant-servic, .perant-offer{
+    height: 450px;
+    width: 70%;
+    margin: auto;
+    margin-top: 28px;
+    position: relative;
+}
+.row1-servic, .row1-offer{
+    width: 100%;
+    height: 45%;
+    top: 0;
+    position: absolute;
+}
+.row2-servic, .row2-offer{
+    width: 100%;
+    height: 45%;
+    bottom: 0;
+    position: absolute;
+}
+.servic1{
+    width: 30%;
+    height: 100%;
+     background: url(../img/General\ Checkup.jpg) no-repeat;
+    background-size: cover;
+    float: left;
+}
+.servic2{
+    width: 30%;
+    height: 100%;
+    background: url(../img/Laboratory.jpg) no-repeat;
+    background-size: cover;
+    float: left;
+    margin: 0 5%;
+}
+.servic3{
+    width: 30%;
+    height: 100%;
+    background: url(../img/Radiology.jpg) no-repeat;
+    background-size: cover;
+    float: right;
+}
+.servic4{
+    width: 30%;
+    height: 100%;
+     background: url(../img/Surgery.jpg) no-repeat;
+    background-size: cover;
+    float: left;
+}
+.servic5{
+    width: 30%;
+    height: 100%;
+    background: url(../img/Pediatrics.jpg) no-repeat;
+    background-size: cover;
+    float: left;
+    margin: 0 5%;
+}
+.servic6{
+    width: 30%;
+    height: 100%;
+    background: url(../img/Cardiology.jpg) no-repeat;
+    background-size: cover;
+    float: right;
+}
+.servic-overlay{
+    background-color: rgba(34, 59, 88, .7);
+    width: 100%;
+    height: 100%;
+    color: #d6eeff;
+    text-align: center;
+    padding-top: 50px;
+    position: relative;
+    visibility: hidden;
+}
+.servic-overlay h2{
+    margin-bottom: 15px;
+    color: white;
+}
+.servic-overlay p{
+    color: #d6eeff;
+    padding: 0 15px;
+}
+.servic-icon1,.servic-icon2{
+    background-color: white;
+    color: rgba(34, 59, 88, .7);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    float: left;
+    border-radius: 15%;
+    position:absolute;
+    margin-top: 20px;
+}
+.servic-icon1 i,.servic-icon2 i{
+    margin-top: 6.8px;
+}
+.servic-icon1{
+    right: 0;
+    margin-right: 39%;
+}
+.servic-icon2{
+    left: 0;
+     margin-left: 39%;
+}
+.servic-all:hover .servic-overlay{
+    opacity: 1;
+    visibility: visible;
+}
+.offer{
+    width: 100%;
+    height: 100vh;
+}
+.offer1{
+    width: 30%;
+    height: 100%;
+    float: left;
+    border: 2px solid #223b58;
+    border-radius: 20px;
+}
+.offer2{
+    width: 30%;
+    height: 100%;
+    float: left;
+    margin: 0 5%;
+    border: 2px solid #223b58;
+    border-radius: 20px;
+}
+.offer3{
+    width: 30%;
+    height: 100%;
+    float: right;
+    border: 2px solid #223b58;
+    border-radius: 20px;
+}
+.offer4{
+    width: 30%;
+    height: 100%;
+    float: left;
+    border: 2px solid #223b58;
+    border-radius: 20px;
+}
+.offer5{
+    width: 30%;
+    height: 100%;
+    float: left;
+    margin: 0 5%;
+    border: 2px solid #223b58;
+    border-radius: 20px;
+}
+.offer6{
+    width: 30%;
+    height: 100%;
+    float: right;
+    border: 2px solid #223b58;
+    border-radius: 20px;
+}
+.offer-all{
+    padding: 10px;
+    position: relative;
+}
+.perant-offer i{
+    font-size: 45px;
+    color: #223b58;
+}
+.perant-offer h2{
+    font-size: 30;
+    color: #223b58;
+}
+.perant-offer p{
+    color: #3c6a9e;
+    margin-top: 5px;
+}
+.offer-title{
+    float: right;
+    height: 100%;
+    width: 80%;
+    margin-top: 18px;
+}
+.offer-all:hover::after{
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    opacity: 0;
+    visibility: visible;
+    z-index: 1;
+    opacity: .8;
+    border-radius: inherit;
+}
+.offer-all::after{
+    content: "";
+    background-color: #3c6a9e;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: .5;
+    z-index: 1;
+    border-radius: inherit;
+}
+.offer-all:hover i{
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+.offer-all:hover h2{
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+.offer-all:hover p{
+    position: relative;
+    z-index: 2;
+    color: #d6eeff;
+}
+.choose{
+    width: 100%;
+    height: 100vh;
+    background-color: #f3faff;
+}
+.perant-choose{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    padding-top: 180px;
+    position: relative;
+}
+.content-choose h2{
+    color: #223b58;
+    font-size: 50;
+}
+.line-choose{
+    background-color: #223b58;
+    width: 325px;
+    height: 4px;
+    margin-top: 15px;
+}
+.content-choose {
+    color: #3c6a9e;
+    margin-top: 20px;
+    width: 50%;
+    float: left;
+}
+.content-choose .discrpt-content-choose{
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.content-choose i{
+    color: #223b58;
+    margin-top:  25px;
+    margin-right: 9px;
+    margin-left: 30px;
+}
+.content-choose p{
+    font-size: 20px;
+    line-height: 27px;
+}
+.img-choose{
+    background: url(../img/img\ choose.jpg) no-repeat center;
+    background-size: cover;
+    height: 450px;
+    width: 30%;
+    float: right;
+    top: 0;
+    right: 0;
+    position: absolute;
+    margin-top: 160px;
+}
+.doted-choose{
+    bottom:  0;
+    right: 0;
+    position: absolute;
+    margin-right: 140px;
+    margin-bottom: 40px;
+}
+.dot-choose{
+    float: right;
+    width: 15px;
+    height: 15px;
+    background-color: #3c6a9e;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 7px;
+}
+.dot3-choose{
+    background-color: #223b58;
+}
+.dot-choose:hover{
+    background-color: #223b58;
+}
+.Counters{
+    height: auto;
+    width: 100%;
+}
+.perant-Counters{
+    height: auto;
+    width: 100%;
+    background: url(../img/img\ Counters.jpg)  no-repeat fixed center;
+    background-size: cover;
+}
+.opacity-counters{
+    width: 100%;
+    height: 50%;
+    background-color: rgba(34, 59, 88,.5);
+}
+.divs-opacity-counters{
+    width: 70%;
+    height: 100%;
+    margin: auto;
+}
+.divs-counters{
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding-top: 130px;
+    color: white;
+}
+.divs-counters i{
+    font-size: 55px;
+    margin-bottom: 10px;
+    
+}
+.divs-counters .num{
+    margin-bottom: 5px;
+    font-size: 19px;
+}
+.divs-counters .discrpt{
+    color: rgb(209, 209, 209);
+}
+.Pricing{
+    width: 100%;
+    height: 100vh;
+}
+.perant-pricing{
+    width: 80%;
+    height: 60%;
+    margin: auto;
+    margin-top: 28px;
+}
+.content-pricing{
+    width: 30%;
+    height: 100%;
+    border: 2px solid #223b58;
+    float: left;
+    text-align: center;
+    color: #223b58;
+    border-radius: 20px;
+    padding: 30px 10px;
+    position: relative;
+}
+.content-pricing1{
+    margin: 0 5%;
+}
+.content-pricing .circle-pricing{
+    border: 2px solid #223b58;
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    margin: auto;
+    font-size: 40px;
+    padding-top: 33px;
+    margin-bottom: 30px;
+}
+.content-pricing h2{
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+.content-pricing p{
+    font-size: 17px;
+    line-height: 25px;
+    color: #3c6a9e;
+}
+.content-pricing button{
+    margin-top: 30px;
+    width: 200px;
+    height: 40px;
+    border: 2px solid #223b58;
+    border-radius: 10px;
+    font-size: 15;
+    color: #223b58;
+    background-color: #f3faff;
+}
+.content-pricing:hover::after{
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    visibility: visible;
+    z-index: 1;
+    opacity: 1;
+    border-radius: inherit;
+}
+.content-pricing::after{
+    content: "";
+    background-color: #3c6a9e;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    z-index: 1;
+    transition: .5s;
+    border-radius: inherit;
+}
+.content-pricing:hover p {
+    position: relative;
+    z-index: 2;
+    color: #d6eeff;
+}
+.content-pricing:hover h2{
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.content-pricing:hover .circle-pricing{
+    position: relative;
+    z-index: 2;
+    color: white;
+    border: 2px solid white;
+}
+.content-pricing:hover{
+    border: 2px solid #223b58;
+}
+.content-pricing:hover button{
+    position: relative;
+    z-index: 2;
+    border: 2px solid #223b58;
+    color: #223b58;
+    background-color: white;
+}
+.Testimonials{
+    height: auto;
+    width: 100%;
+}
+.perant-Testimonials{
+    height: auto;
+    width: 100%;
+    background: url(../img/Testimonials1.jpg)  no-repeat fixed center;
+    background-size: cover;
+}
+/* .white-Testimonials{
+    width: 100%;
+    height: 25%;
+    background-color: white;
+} */
+.opacity-Testimonials{
+    width: 100%;
+    height: 50%;
+    background-color: rgba(34, 59, 88,.5);
+}
+.divs-perant-Testimonials{
+    width: 50%;
+    height: 100%;
+    margin: auto;
+}
+.divs-Testimonials{
+    float: left;
+    width: 50%;
+    padding-top: 130px;
+    color: white;
+    position: relative; 
+}
+.divs-Testimonials img{
+    width: 70px;
+    height: 70;
+    border-radius: 50%;  
+}
+.content-Testimonials h2, h4{
+    top: 0;
+    left: 80px;
+    position: absolute;
+}
+.content-Testimonials h2{
+    margin-top: 155px;
+    color: #223b58;
+}
+.content-Testimonials h4{
+    margin-top: 185px;
+    color: #d6eeff;
+}
+.content{
+    width: 100%;
+    height: 100vh;
+    background-color: #f3faff;
+    /* background-color: #d7d7d7; */
+}
+.perant-content{
+    width: 80%;
+    height: 57%;
+    margin: auto;
+    margin-top: 28px;
+}
+.content-content{
+    width: 30%;
+    height: 100%;
+    background-color: #3c6a9e;
+    border: 2px solid white;
+    outline: 2px solid #3c6a9e;
+    float: left;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    padding: 30px 10px;
+    position: relative;
+}
+.content-content1{
+    margin: 0 5%;
+}
+.img-content{
+    width: 85%;
+    height: 80%;
+    margin: auto;
+    position: relative;
+}
+.overlay-img-content{
+    float: right;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255,.5);
+    visibility: hidden;
+    position: absolute;
+}
+.i-overlay{
+    float: right;
+    font-size: 30;
+    width: 50px;
+    height: 150px;
+    text-align: center;
+    background-color: #3c6a9e;
+}
+.i-overlay i{
+    margin-top: 16px;
+}
+.content-content:hover .overlay-img-content{
+    visibility: visible;
+}
+.title-content{
+    margin-top: 15px;
+}
+.title-content h2{
+    font-size: 27px;
+}
+.title-content p{
+    margin-top: 10px;
+    font-size: 20px;
+    color: #d6eeff;
+}
+.img-content1{
+    background: url(../img/Cardiologist.jpg) no-repeat;
+    background-size: cover;
+}
+.img-content2{
+    background: url(../img/Pediatrician.jpg) no-repeat;
+    background-size: cover;
+}
+.img-content3{
+    background: url(../img/Dental.jpg) no-repeat;
+    background-size: cover;
+}
+.content-content:hover::after{
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    visibility: visible;
+    z-index: 1;
+    opacity: 1;
+    border-radius: inherit;
+}
+.content-content::after{
+    content: "";
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    z-index: 1;
+    transition: .5s;
+    border-radius: inherit;
+}
+.content-content:hover p {
+    position: relative;
+    z-index: 2;
+    color: #3c6a9e;
+}
+.content-content:hover h2{
+    position: relative;
+    z-index: 2;
+    color: #223b58;
+}
+
+.content-content:hover .circle-pricing{
+    position: relative;
+    z-index: 2;
+    color: #223b58; 
+    border: 2px solid #223b58;
+}
+.content-content:hover{
+    border: 2px solid #3c6a9e;
+}
+.img-content{
+    position: relative;
+    z-index: 2;
+}
+.health{
+    width: 100%;
+    height: 100vh; 
+}
+.perant-health{
+    width: 80%;
+    height: 60%;
+    margin: auto;
+    margin-top: 28px;
+}
+
+.content-health{
+    width: 30%;
+    height: 100%;
+    border: 2px solid #223b58;
+    float: left;
+    text-align: center;
+    color: #223b58;
+    border-radius: 20px;
+    padding: 30px 10px;
+    position: relative;
+    margin: auto;
+}
+.content-health2{
+    margin: 0 5%;
+}
+
+.content-img-health img{
+    width: 85%;
+    height: 60%;
+    margin: auto;
+    position: relative;
+    margin-bottom: 20px;
+}
+.content-health i{
+    font-size: 20px;
+    margin-right: 5px;
+}
+.content-health h2{
+    margin-top: 10px;
+
+}
+.content-health p{
+    margin: 10px 0;
+    color: #3c6a9e;
+}
+.content-health a{
+    color: #223b58;
+}
+
+.content-health:hover::after{
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    visibility: visible;
+    z-index: 1;
+    opacity: 1;
+    border-radius: inherit;
+}
+.content-health::after{
+    content: "";
+    background-color: #3c6a9e;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    z-index: 1;
+    transition: .5s;
+    border-radius: inherit;
+}
+.content-health:hover p {
+    position: relative;
+    z-index: 2;
+    color: #d6eeff;
+}
+.content-health:hover h2{
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.content-health:hover a{
+    position: relative;
+    z-index: 2;
+    color: white; 
+    text-decoration-line: none;
+}
+
+.content-health:hover img{
+    position: relative;
+    z-index: 2;
+}
+.content-health:hover i{
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+.content-health:hover span{
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+.footer{
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+    background-color: rgba(60, 106, 158,.7);
+}
+.perant-footer{
+    text-align: center;
+    margin-top: 15px;
+}
+.i-footer{
+    font-size: 25px;
+    margin: 0 10px;
+    color: white;
+}
+.perant-footer p{
+    font-size: 14px;
+    margin-top: 20px;
+    color: #d6eeff;
+}
+.fa-brands:hover {
+    color: #223b58;
+}
+i{
+    cursor: pointer;
+}
